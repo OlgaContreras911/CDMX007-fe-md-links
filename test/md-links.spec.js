@@ -14,4 +14,4 @@
   //it('is a function', () => {
     //expect(typeof window.read).toBe('function');
   //});
-//});
+//}); fun
