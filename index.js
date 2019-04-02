@@ -11,5 +11,7 @@
     //console.log(data.toString());
 //})
 
-const read = require('./read.js');
-console.log(read)
+//const read = require('./read.js');
+const dir = require('./identify.js');
+console.log(dir)
+//console.log(dir)
