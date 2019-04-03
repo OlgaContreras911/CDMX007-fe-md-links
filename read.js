@@ -1,18 +1,22 @@
 //const total = {}
 
-const read =()=>{
+const readof={}
 const fs= require("fs");
+const links=require("./links")
+
+const read =()=>{
 
 fs.readFile("./README.md", "utf8",function (err,data)  {
     if(err){
 
     }else{
-        console.log(data)
+        links.mdlinks(data)
     }
     //console.log(data.toString());
 })
 }
-module.exports = read()
+read()
+module.exports.readof = readof
 
 //total.read = read;
 //module.exports = total;

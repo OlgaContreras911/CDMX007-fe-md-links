@@ -8,12 +8,12 @@ if(err){
     console.log(mdsFile);
     mdsFile.forEach(element => {
     if(path.extname(element) === ".md"){
-       fs.readFile(element, (err,data) =>
+       fs.readFile(element, "utf8", (err,data) =>
             {
                 if(err)
                     console.log(err)
                 else
-                console.log(data.toString());
+                console.log(data);
             });
     }  
     });
