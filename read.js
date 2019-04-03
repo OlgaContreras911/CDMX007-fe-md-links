@@ -8,7 +8,7 @@ const read =()=>{
 
 fs.readFile("./README.md", "utf8",function (err,data)  {
     if(err){
-
+        console.error('Error', err);
     }else{
         links.mdlinks(data)
     }

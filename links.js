@@ -1,8 +1,8 @@
 const mdlinks =(data)=>{
    
-            const urlLinks = /(https?:\/\/[^\s]+)/g;
+            const urlLinks = /(https?:\/\/[^\s]+)/g;      
             const match = data.match(urlLinks)
-            console.log(match)
+            console.log('match', match)
         };
     
 
