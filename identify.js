@@ -1,13 +1,16 @@
-const directory =()=>{
+const identify =()=>{
    
     const fs= require("fs");
     
-    fs.readFile("./README.md", function (err,data)  {
+    fs.readFile("./README.md", "utf8", function (err,data)  {
         if(err){
     
+        }else{
+            const urlLinks = /(https?:\/\/[^\s]+)/g;
+            const match = data.match(urlLinks)
+            console.log(match)
         }
-        console.log(data.toString());
     })
 }
     
-module.exports = directory()   
+module.exports = identify()   
