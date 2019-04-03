@@ -12,6 +12,11 @@
 //})
 
 //const read = require('./read.js');
-const identify = require('./identify.js');
-console.log(identify)
 //console.log(dir)
+//const mds = require('./mds.js');
+//console.log(mds)
+//const identify = require('./identify.js');
+//console.log(identify)
+const links = require('./links.js');
+console.log(links)
+
