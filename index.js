@@ -13,8 +13,8 @@
 
 //const read = require('./read.js');
 //console.log(dir)
-const read = require('./read.js');
-console.log(read)
+const mds = require('./mds.js');
+console.log(mds)
 //const identify = require('./identify.js');
 //console.log(identify)
 //const links = require('./links.js');

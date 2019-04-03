@@ -1,25 +1,29 @@
-const mds =()=>{
-    const fs = require('fs');
+const readofA={}
+const fs = require('fs');
 const path = require('path');
-fs.readdir('./', (err, mdsFile) => {
+const links=require("./links")
+const mds =()=>{
+
+fs.readdir('./', (err,data) => {
 if(err){
     console.log(err);
 } else{
-    console.log(mdsFile);
-    mdsFile.forEach(element => {
+    
+    data.forEach(element => {
     if(path.extname(element) === ".md"){
        fs.readFile(element, "utf8", (err,data) =>
             {
                 if(err)
                     console.log(err)
                 else
-                console.log(data);
+                links.mdlinks(data)
             });
     }  
     });
 }
 });}
-module.exports = mds()
+mds()
+module.exports.readofA = readofA
 
 /*const prueba =()=>{
     const fs = require('fs');
