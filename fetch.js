@@ -1,12 +1,14 @@
 const fetch = require('node-fetch');
-const mds = require("./mds");
+const colors = require('colors');
 
-const newMds = mds.mds(data);
-
-const fetchData = ()=>{
+const fetchData = (newMds)=>{
 newMds.forEach(element => {
     fetch(element).then(res =>{
-        console.log(res.status)
+        const status = res.status
+        if(status === 200){
+            console.log(`link: ${colors.blue(element)} status: ${colors.green(status)}`)
+        }else{
+        console.log(`link: ${colors.blue(element)} status: ${colors.red(status)}`)}
     })
     
 });
