@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const boot = require('./index.js');
+const mds = require('./index.js');
 
-boot.mds();
+mds();
 
 
 //const [,, ... args] = process.argv

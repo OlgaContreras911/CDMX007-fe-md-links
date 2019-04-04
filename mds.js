@@ -57,5 +57,5 @@ if(optionOne ==="--validate"){
 }
 }
 
-module.exports.mds = mds;
+module.exports = mds;
 

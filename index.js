@@ -1,8 +1,7 @@
-const toCli = require('./mds.js');
+const mds = require('./mds.js');
 
-toCli.mds();
 
-module.exports = toCli
+module.exports = mds
 
 
 //const identify = require('./identify.js');
