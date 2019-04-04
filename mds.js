@@ -1,17 +1,19 @@
 const fs = require('fs');
 const path = require('path');
 const links=require("./links");
-
+const folderUser=process.argv[2]
+// const fetchData = require('./fetch.js')
 const mds =()=>{
 
-    fs.readdir('./', (err,data) => {
+    fs.readdir(folderUser, (err,data) => {
     if(err){
         console.error('Error', err);
     } else{
-        
+        //console.log('folderuser :',folderUser)
         data.forEach(element => {
         if(path.extname(element) === ".md"){
-        fs.readFile(element, "utf8", (err,data) =>
+        const file = element;
+            fs.readFile(`${folderUser}/${file}`, "utf8", (err,data) =>
                 {
                     if(err)
                     console.error('Error', err);
