@@ -9,7 +9,7 @@ const mds =()=>{
     if(err){
         console.error('Error', err);
     } else{
-        //console.log('folderuser :',folderUser)
+        //console.log('folderuser :',folderUser);
         data.forEach(element => {
         if(path.extname(element) === ".md"){
         const file = element;
