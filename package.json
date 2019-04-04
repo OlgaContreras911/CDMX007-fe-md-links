@@ -16,7 +16,7 @@
   "author": "Olga Contreras Monsivais",
   "license": "ISC",
   "bin": {
-    "say-hello": "./cli.js"
+    "md-links": "./cli.js"
   },
   "bugs": {
     "url": "https://github.com/OlgaContreras911/CDMX007-fe-md-links/issues"
