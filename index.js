@@ -11,5 +11,13 @@
     //console.log(data.toString());
 //})
 
-const read = require('./read.js');
-console.log(read)
+//const read = require('./read.js');
+//console.log(dir)
+const mds = require('./mds.js');
+
+mds();
+//const identify = require('./identify.js');
+//console.log(identify)
+//const links = require('./links.js');
+//console.log(links)
+
