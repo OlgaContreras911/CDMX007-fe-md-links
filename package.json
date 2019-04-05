@@ -23,12 +23,10 @@
   },
   "homepage": "https://github.com/OlgaContreras911/CDMX007-fe-md-links#readme",
   "devDependencies": {
-
     "jest": "^24.6.0"
   },
   "dependencies": {
     "colors": "^1.3.3",
     "node-fetch": "^2.3.0"
-
   }
 }
