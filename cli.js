@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-const mds = require('./index.js');
+const mds = require('./mds.js');
 
 mds();
 
 
-//const [,, ... args] = process.argv
 
+//const [,, ... args] = process.argv
 //console.log(`Hello World ${args}`)
-//HOLA
+
