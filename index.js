@@ -1,23 +1,10 @@
-// module.exports = () => {
-  // ...
-// };
-
-//const fs= require("fs");
-
-//fs.readFile("./README.md", function (err,data)  {
-  //  if(err){
-
-    //}
-    //console.log(data.toString());
-//})
-
-//const read = require('./read.js');
-//console.log(dir)
 const mds = require('./mds.js');
+mds()
 
-mds();
-//const identify = require('./identify.js');
-//console.log(identify)
-//const links = require('./links.js');
-//console.log(links)
+
+//const mds = require('./mds.js');
+//module.exports = mds
+
+
+
 
