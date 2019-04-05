@@ -6,9 +6,9 @@ newMds.forEach(element => {
     fetch(element).then(res =>{
         const status = res.status
         if(status === 200){
-            console.log(`link: ${colors.blue(element)} status: ${colors.green(status)}`)
+            console.log(`link: ${colors.blue(element)} status: ${colors.green(status)} OK`)
         }else{
-        console.log(`link: ${colors.blue(element)} status: ${colors.red(status)}`)}
+        console.log(`link: ${colors.blue(element)} status: ${colors.red(status)} FAIL`)}
     })
     
 });
