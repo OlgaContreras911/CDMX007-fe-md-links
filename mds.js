@@ -30,7 +30,32 @@ if(optionOne ==="--validate"){
     }
     
     });
-}else{
+}else if(optionOne ==="--stats"){
+    fs.readdir(folderUser, (err,data) => {
+        const pathResolve = path.resolve(folderUser)
+        //console.log("ruta :",pathResolve)
+    if(err){
+        console.error('Error', err);
+    } else{
+        //console.log('folderuser :',folderUser);
+        data.forEach(element => {
+        if(path.extname(element) === ".md"){
+        const file = element;
+            fs.readFile(`${pathResolve}/${file}`, "utf8", (err,data) =>
+                {
+                    if(err)
+                    console.error('Error', err);
+
+                    else
+                    links.mdlinksC(data)
+                });
+        }  
+        });
+    }
+    
+    });
+}
+else{
     fs.readdir(folderUser, (err,data) => {
         const pathResolve = path.resolve(folderUser)
         //console.log("ruta :",pathResolve)
