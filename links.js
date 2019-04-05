@@ -3,7 +3,7 @@ const mdlinks =(data)=>{
    
             const urlLinks = /(https?:\/\/[^\)\s ]+)/g;      
             const match = data.match(urlLinks)
-            //console.log('match', match)
+            //console.log('match', match);
             fetchFiles.fetchData(match)
         };
 const mdlinksB =(data)=>{
