@@ -1,6 +1,8 @@
 const fetch = require('node-fetch');
 const colors = require('colors');
 const path = require('path');
+const logSymbols = require('log-symbols');
+
 
 const fetchData = (newMds)=>{
     newMds.forEach(element => {
@@ -11,9 +13,9 @@ const fetchData = (newMds)=>{
             
             const status = res.status
             if(status === 200){
-                console.log(`Link name: ${colors.white(linkName)} link: ${colors.blue(element)} status: ${colors.green(status)} OK`)
+                console.log(`Link name: ${colors.white(linkName)} link: ${colors.blue(element)} status: ${colors.green(status)} ${logSymbols.success} OK`)
             }else if(status === 404){
-            console.log(`Link name: ${colors.white (linkName)} link: ${colors.blue(element)} status: ${colors.red(status)} FAIL`)}
+            console.log(`Link name: ${colors.white (linkName)} link: ${colors.blue(element)} status: ${colors.red(status)} ${logSymbols.error} FAIL`)}
         })
         
     });
