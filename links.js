@@ -15,12 +15,15 @@ const mdlinks = (data) => {
 };
 
 const mdlinksB = (data) => {
-     
+    const completeURL=/\[((.+?))\]\((http|https|ftp|ftps).+?\)/g;
+    let matchOne=data.match(completeURL)
+    if(matchOne){
+    matchOne =  JSON.stringify(matchOne)
     const urlLinks =/(https?:\/\/[^\)\s ]+)/g;
-    const match = data.match(urlLinks)
-    console.log('match', match)
+    const matchFinal = matchOne.match(urlLinks)
+    console.log('match', matchFinal)
     //console.log(`${data}`+`${match}`)
-
+    }
 };
 const mdlinksC = (data) => {
     const completeURL=/\[((.+?))\]\((http|https|ftp|ftps).+?\)/g;
