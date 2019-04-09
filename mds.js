@@ -1,10 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const links = require("./links");
-const folderUser = process.argv[2]
-const optionOne = process.argv[3]
 
-const mds = () => {
+
+const mds = (folderUser, optionOne) => {
 
     if (optionOne === "--validate") {
         if (path.extname(folderUser) === ".md"){

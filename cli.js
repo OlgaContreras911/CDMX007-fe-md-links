@@ -2,8 +2,9 @@
 
 
 const mds = require('./mds.js');
-
-mds();
+const folderUser = process.argv[2]
+const optionOne = process.argv[3]
+mds(folderUser, optionOne);
 
 
 

@@ -1,12 +1,19 @@
+const mds = require('../mds');
 
+describe('mds', () => {
 
-//const mdLinks = require('./read');
+  it('mds should be a function', () => {
+   expect(typeof mds).toBe('function');
+  });
 
-//describe('mdLinks', () => {
+  // it('mds should console ', () => {
+  //   global.links = { md: jest.fn()}
+  //   mds('./README2.md');
+  //   expect(links.md).toBeCalled();
+  //  });
 
- // it('should...', () => {
-   // console.log('FIX ME!');
-  //});
+}); 
+
 
 //});
 //require('./read');
@@ -16,4 +23,3 @@
   //it('is a function', () => {
     //expect(typeof window.read).toBe('function');
   //});
-//}); fun
