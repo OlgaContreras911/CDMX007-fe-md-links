@@ -21,4 +21,33 @@ const fetchData = (newMds) => {
 
     });
 }
+
+const fetchDataCount = (newMds) => {
+    let arrayOK= 0
+    let countBroken= []
+    newMds.forEach(element => {
+       
+        fetch(element).then(res => {
+
+            const status = res.status
+            if (status === 200) {
+            
+                arrayOK=arrayOK+1
+                
+                //console.log(countOk)
+
+                //console.log(`Ok : ${colors.white(countOk)}`)
+            } else if (status === 404) {
+                countBroken.push(status)
+            }
+       // console.log(`Broken : ${colors.white(countBroken)}`)
+        }).catch(err=>console.log(err))
+            
+    });
+setTimeout(function(){
+    console.log(`Broken: ${colors.red(countBroken.length)} Ok: ${colors.green(arrayOK)}`)
+},4000)
+}
+
 module.exports.fetchData = fetchData
+module.exports.fetchDataCount = fetchDataCount
