@@ -18,7 +18,7 @@ const mds = (folderUser, optionOne,optionTwo) => {
 
             fs.readdir(folderUser, (err, data) => {
                 const pathResolve = path.resolve(folderUser)
-                //console.log("ruta :",pathResolve);
+                //console.log("ruta :",pathResolve)
                 if (err) {
                     console.error('Error', err);
                 } else {
