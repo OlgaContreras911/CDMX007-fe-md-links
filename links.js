@@ -40,6 +40,28 @@ const mdlinksC = (data) => {
         
         })
         console.log( 'Únicos:',`${uniqueLinks.length}`)
+       // fetchFiles.fetchData(matchFinal)
+  }
+  
+    
+    
+};
+
+const mdlinksD = (data) => {
+    const completeURL=/\[((.+?))\]\((http|https|ftp|ftps).+?\)/g;
+    let matchOne=data.match(completeURL)
+    if(matchOne){
+        matchOne =  JSON.stringify(matchOne)
+        const urlLinks = /(https?:\/\/[^\)\s ]+)/g;
+        const matchFinal = matchOne.match(urlLinks)
+        //console.log(matchFinal)
+    //console.log('match', match);
+    console.log('Links por archivo:', matchFinal.length)
+    const uniqueLinks = matchFinal.filter(function(element, index, arr){
+        return arr.indexOf(element)===index;
+        
+        })
+        console.log( 'Únicos:',`${uniqueLinks.length}`)
         fetchFiles.fetchDataB(matchFinal)
   }
   
@@ -50,3 +72,4 @@ const mdlinksC = (data) => {
 module.exports.mdlinks = mdlinks;
 module.exports.mdlinksB = mdlinksB;
 module.exports.mdlinksC = mdlinksC;
+module.exports.mdlinksD = mdlinksD;

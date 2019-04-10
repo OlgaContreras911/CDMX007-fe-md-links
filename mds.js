@@ -3,7 +3,7 @@ const path = require('path');
 const links = require("./links");
 
 
-const mds = (folderUser, optionOne) => {
+const mds = (folderUser, optionOne, optionTwo) => {
 
     if (optionOne === "--validate") {
         if (path.extname(folderUser) === ".md"){
@@ -73,8 +73,41 @@ const mds = (folderUser, optionOne) => {
 
         });
     }
+    } else if(optionOne= "--all" ) {
+        if (path.extname(folderUser) === ".md"){
+            fs.readFile(folderUser, "utf8", (err, data) => {
+                if (err)
+                    console.error('Error', err);
+    
+                else
+                    links.mdlinksD(data)
+            });
+        }else{
+        
+        fs.readdir(folderUser, (err, data) => {
+            const pathResolve = path.resolve(folderUser)
+            //console.log("ruta :",pathResolve)
+            if (err) {
+                console.error('Error', err);
+            } else {
+                //console.log('folderuser :',folderUser);
+                data.forEach(element => {
+                    if (path.extname(element) === ".md") {
+                        const file = element;
+                        fs.readFile(`${pathResolve}/${file}`, "utf8", (err, data) => {
+                            if (err)
+                                console.error('Error', err);
+
+                            else
+                                links.mdlinksD(data)
+                        });
+                    }
+                });
+            }
+
+        });
     }
-    else {
+    } else {
         if (path.extname(folderUser) === ".md"){
             fs.readFile(folderUser, "utf8", (err, data) => {
                 if (err)
@@ -108,8 +141,7 @@ const mds = (folderUser, optionOne) => {
 
         });
     }
-    }
 }
-
+}
 module.exports = mds;
 
