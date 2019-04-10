@@ -21,4 +21,30 @@ const fetchData = (newMds) => {
 
     });
 }
+
+const fetchDataB = (newMds) => {
+    //const countBroken= 0
+    let countBroken= 0
+    newMds.forEach(element => {
+       
+        fetch(element).then(res => {
+
+            const status = res.status
+            if (status === 404) {
+            
+                countBroken++
+                console.log(`Broken : ${colors.white(countBroken)}`)
+                //countOk++
+                //console.log(countOk)
+
+                //console.log(`Ok : ${colors.white(countOk)}`)
+           // } else if (status === 404) {
+                
+            }
+       // console.log(`Broken : ${colors.white(countBroken)}`)
+        }).catch(err=>console.log(err))
+            
+    });
+}
 module.exports.fetchData = fetchData
+module.exports.fetchDataB = fetchDataB

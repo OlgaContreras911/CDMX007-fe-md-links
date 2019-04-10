@@ -40,8 +40,9 @@ const mdlinksC = (data) => {
         
         })
         console.log( 'Únicos:',`${uniqueLinks.length}`)
-    
+        fetchFiles.fetchDataB(matchFinal)
   }
+  
     
     
 };
