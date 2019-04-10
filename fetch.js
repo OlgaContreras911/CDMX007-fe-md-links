@@ -45,7 +45,7 @@ const fetchDataB = (newMds) => {
             
     });
 setTimeout(function(){
-    console.log(`Broken: ${colors.white(countBroken.length)} Ok ${colors.blue(arrayOK)}`)
+    console.log(`Broken: ${colors.red(countBroken.length)} Ok: ${colors.green(arrayOK)}`)
 },4000)
 }
 

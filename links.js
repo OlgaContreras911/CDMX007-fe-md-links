@@ -35,11 +35,8 @@ const mdlinksC = (data) => {
         //console.log(matchFinal)
     //console.log('match', match);
     console.log('Links por archivo:', matchFinal.length)
-    const uniqueLinks = matchFinal.filter(function(element, index, arr){
-        return arr.indexOf(element)===index;
-        
-        })
-        console.log( 'Únicos:',`${uniqueLinks.length}`)
+    const uniqueLinks = new Set(matchFinal)
+        console.log( 'Únicos:',`${[...uniqueLinks].length}`)
        // fetchFiles.fetchData(matchFinal)
   }
   
@@ -56,7 +53,7 @@ const mdlinksD = (data) => {
         const matchFinal = matchOne.match(urlLinks)
         //console.log(matchFinal)
     //console.log('match', match);
-    console.log('Links por archivo:', matchFinal.length)
+    console.log('Links por archivo:',`${matchFinal.length}`)
     const uniqueLinks = matchFinal.filter(function(element, index, arr){
         return arr.indexOf(element)===index;
         
