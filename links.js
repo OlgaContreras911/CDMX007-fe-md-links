@@ -1,6 +1,6 @@
 const fetchFiles = require('./fetch.js')
 
-const mdlinks = (data) => {
+const mdlinksValidate = (data) => {
     const completeURL=/\[((.+?))\]\((http|https|ftp|ftps).+?\)/g;
     let matchOne=data.match(completeURL)
     if(matchOne){
@@ -14,7 +14,7 @@ const mdlinks = (data) => {
     
 };
 
-const mdlinksB = (data) => {
+const mdlinksJust = (data) => {
     const completeURL=/\[((.+?))\]\((http|https|ftp|ftps).+?\)/g;
     let matchOne=data.match(completeURL)
     if(matchOne){
@@ -25,7 +25,7 @@ const mdlinksB = (data) => {
     //console.log(`${data}`+`${match}`)
     }
 };
-const mdlinksC = (data) => {
+const mdlinksStats = (data) => {
     const completeURL=/\[((.+?))\]\((http|https|ftp|ftps).+?\)/g;
     let matchOne=data.match(completeURL)
     if(matchOne){
@@ -44,7 +44,7 @@ const mdlinksC = (data) => {
     
 };
 
-const mdlinksD = (data) => {
+const mdlinksComplete = (data) => {
     const completeURL=/\[((.+?))\]\((http|https|ftp|ftps).+?\)/g;
     let matchOne=data.match(completeURL)
     if(matchOne){
@@ -53,20 +53,20 @@ const mdlinksD = (data) => {
         const matchFinal = matchOne.match(urlLinks)
         //console.log(matchFinal)
     //console.log('match', match);
-    console.log('Links por archivo:',`${matchFinal.length}`)
+    console.log('Links per file:',`${matchFinal.length}`)
     const uniqueLinks = matchFinal.filter(function(element, index, arr){
         return arr.indexOf(element)===index;
         
         })
-        console.log( 'Únicos:',`${uniqueLinks.length}`)
-        fetchFiles.fetchDataB(matchFinal)
+        console.log( 'Unique:',`${uniqueLinks.length}`)
+        fetchFiles.fetchDataCount(matchFinal)
   }
   
     
     
 };
 
-module.exports.mdlinks = mdlinks;
-module.exports.mdlinksB = mdlinksB;
-module.exports.mdlinksC = mdlinksC;
-module.exports.mdlinksD = mdlinksD;
+module.exports.mdlinksValidate = mdlinksValidate;
+module.exports.mdlinksJust = mdlinksJust;
+module.exports.mdlinksStats = mdlinksStats;
+module.exports.mdlinksComplete = mdlinksComplete;

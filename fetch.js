@@ -22,7 +22,7 @@ const fetchData = (newMds) => {
     });
 }
 
-const fetchDataB = (newMds) => {
+const fetchDataCount = (newMds) => {
     let arrayOK= 0
     let countBroken= []
     newMds.forEach(element => {
@@ -50,4 +50,4 @@ setTimeout(function(){
 }
 
 module.exports.fetchData = fetchData
-module.exports.fetchDataB = fetchDataB
+module.exports.fetchDataCount = fetchDataCount

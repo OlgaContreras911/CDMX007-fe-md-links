@@ -12,7 +12,7 @@ const mds = (folderUser, optionOne,optionTwo) => {
                     console.error('Error', err);
 
                 else
-                    links.mdlinksD(data)
+                    links.mdlinksComplete(data)
             });
         } else {
 
@@ -31,7 +31,7 @@ const mds = (folderUser, optionOne,optionTwo) => {
                                     console.error('Error', err);
 
                                 else
-                                    links.mdlinksD(data)
+                                    links.mdlinksComplete(data)
                             });
                         }
                     });
@@ -46,7 +46,7 @@ const mds = (folderUser, optionOne,optionTwo) => {
                     console.error('Error', err);
 
                 else
-                    links.mdlinksC(data)
+                    links.mdlinksStats(data)
             });
         } else {
 
@@ -65,7 +65,7 @@ const mds = (folderUser, optionOne,optionTwo) => {
                                     console.error('Error', err);
 
                                 else
-                                    links.mdlinksC(data)
+                                    links.mdlinksStats(data)
                             });
                         }
                     });
@@ -80,7 +80,7 @@ const mds = (folderUser, optionOne,optionTwo) => {
                     console.error('Error', err);
 
                 else
-                    links.mdlinks(data)
+                    links.mdlinksValidate(data)
             });
         } else {
 
@@ -99,7 +99,7 @@ const mds = (folderUser, optionOne,optionTwo) => {
                                     console.error('Error', err);
 
                                 else
-                                    links.mdlinksB(data)
+                                    links.mdlinksValidate(data)
                             });
                         }
                     });
@@ -114,7 +114,7 @@ const mds = (folderUser, optionOne,optionTwo) => {
                     console.error('Error', err);
 
                 else
-                    links.mdlinksB(data)
+                    links.mdlinksJust(data)
             });
         } else {
 
@@ -133,7 +133,7 @@ const mds = (folderUser, optionOne,optionTwo) => {
                                     console.error('Error', err);
 
                                 else
-                                    links.mdlinksB(data)
+                                    links.mdlinksJust(data)
                             });
                         }
                     });
