@@ -21,4 +21,26 @@ const fetchData = (newMds) => {
 
     });
 }
+
+const fetchDataB = (newMds) => {
+    let brokenLinks=[]
+    let okLinks=[]
+    newMds.forEach(element => {
+        
+        fetch(element).then(res => {
+
+            const status = res.status
+            if (status === 200) {
+                okLinks.push(element)
+                
+            } else if (status === 404) {
+                brokenLinks.push(element)
+               
+            }
+        }).catch(err=>console.log(err))
+         
+    });
+    console.log(`Link name: ${brokenLinks}`)
+}
 module.exports.fetchData = fetchData
+module.exports.fetchDataB = fetchDataB
