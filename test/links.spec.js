@@ -1,7 +1,9 @@
+
 const mdlinksJust = require('../links').mdlinksJust;
 const mdlinksStats = require('../links').mdlinksStats;
 const mdlinksValidate = require('../links').mdlinksValidate;
 const fetchData = require('../fetch.js').fetchData;
+
 
 describe("mdlinksJust, consolea links en archivos md", () => {
 
@@ -58,7 +60,9 @@ describe("mdlinksValidate, cuenta los links unicos en un archivo", () => {
   // mdlinksValidate(data)
   //expect(console.log).toBeCalledWith("Link name: 42118443-b7a5f1f0-7bc8-11e8-96ad-9cc5593715a6 link: https://user-images.githubusercontent.com/110297/42118443-b7a5f1f0-7bc8-11e8-96ad-9cc5593715a6.jpg status: 200 √ OK")
 
+
   //});    
+
 
 })
 describe("fetchFiles, obtiene fetch de data", () => {
@@ -69,3 +73,4 @@ describe("fetchFiles, obtiene fetch de data", () => {
   });
 
 })
+
