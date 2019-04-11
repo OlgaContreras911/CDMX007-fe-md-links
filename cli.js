@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
 
-const mds = require('./mds.js');
+const mds = require('./index.js');
 const folderUser = process.argv[2]
 const optionOne = process.argv[3]
-mds(folderUser, optionOne);
+const optionTwo = process.argv[4]
+mds(folderUser, optionOne,optionTwo);
 
 
 

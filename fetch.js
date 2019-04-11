@@ -22,25 +22,32 @@ const fetchData = (newMds) => {
     });
 }
 
-const fetchDataB = (newMds) => {
-    let brokenLinks=[]
-    let okLinks=[]
+const fetchDataCount = (newMds) => {
+    let arrayOK= []
+    let countBroken= []
     newMds.forEach(element => {
-        
+       
         fetch(element).then(res => {
 
             const status = res.status
             if (status === 200) {
-                okLinks.push(element)
+            
+                arrayOK.push(status)
                 
+                //console.log(countOk)
+
+                //console.log(`Ok : ${colors.white(countOk)}`)
             } else if (status === 404) {
-                brokenLinks.push(element)
-               
+                countBroken.push(status)
             }
+       // console.log(`Broken : ${colors.white(countBroken)}`)
         }).catch(err=>console.log(err))
-         
+            
     });
-    console.log(`Link name: ${brokenLinks}`)
+setTimeout(function(){
+    console.log(`Broken: ${colors.red(countBroken.length)} Ok: ${colors.green(arrayOK.length)}`)
+},4000)
 }
+
 module.exports.fetchData = fetchData
-module.exports.fetchDataB = fetchDataB
+module.exports.fetchDataCount = fetchDataCount

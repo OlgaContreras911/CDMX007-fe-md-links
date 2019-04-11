@@ -1,4 +1,4 @@
-const mds = require('../mds');
+const mds = require('../index');
 
 describe('mds', () => {
 
