@@ -149,10 +149,10 @@ Esto hará que se instalen las dependencias, para que el módulo funcione correc
 
 ## Instalación
 
-Módulo instalable via `npm install <github-user>/md-links`. Este módulo incluye un ejecutable que se puede importar con `require`
+Módulo instalable via `npm install mdlink-sogcm`. Este módulo incluye un ejecutable que se puede importar con `require`
 para usarlo programáticamente.
 
- Puede instalarse via `npm install --global <github-user>/md-links` si se desea implementar globalmente
+ Puede instalarse via `npm install --global mdlink-sogcm` si se desea implementar globalmente
 
  ## Uso
 
