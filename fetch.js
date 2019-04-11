@@ -40,7 +40,7 @@ const fetchDataCount = (newMds) => {
             } else if (status === 404) {
                 countBroken.push(status)
             }
-       // console.log(`Broken : ${colors.white(countBroken)}`)
+       // console.log(`Broken: ${colors.white(countBroken)}`)
         }).catch(err=>console.log(err))
             
     });
