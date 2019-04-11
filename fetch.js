@@ -23,7 +23,7 @@ const fetchData = (newMds) => {
 }
 
 const fetchDataCount = (newMds) => {
-    let arrayOK= 0
+    let arrayOK= []
     let countBroken= []
     newMds.forEach(element => {
        
@@ -32,7 +32,7 @@ const fetchDataCount = (newMds) => {
             const status = res.status
             if (status === 200) {
             
-                arrayOK=arrayOK+1
+                arrayOK.push(status)
                 
                 //console.log(countOk)
 
@@ -45,7 +45,7 @@ const fetchDataCount = (newMds) => {
             
     });
 setTimeout(function(){
-    console.log(`Broken: ${colors.red(countBroken.length)} Ok: ${colors.green(arrayOK)}`)
+    console.log(`Broken: ${colors.red(countBroken.length)} Ok: ${colors.green(arrayOK.length)}`)
 },4000)
 }
 
