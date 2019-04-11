@@ -3,7 +3,7 @@ const mds = require('../index');
 describe('mds', () => {
 
   it('mds should be a function', () => {
-   expect(typeof mds).toBe('function');
+    expect(typeof mds).toBe('function');
   });
 
   // it('mds should console ', () => {
@@ -12,7 +12,7 @@ describe('mds', () => {
   //   expect(links.md).toBeCalled();
   //  });
 
-}); 
+});
 
 
 //});
@@ -20,6 +20,6 @@ describe('mds', () => {
 
 //describe('es una función llamada read', () => { // test si es un objeto
 
-  //it('is a function', () => {
-    //expect(typeof window.read).toBe('function');
-  //});
+//it('is a function', () => {
+//expect(typeof window.read).toBe('function');
+//});
