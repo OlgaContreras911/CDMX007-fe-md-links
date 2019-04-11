@@ -27,7 +27,7 @@ algunas estadísticas.
 
 ![ZB](https://i.ibb.co/VYg9Cwc/BL.jpg)
 
-## Documentación tpécnica de la librería
+## Documentación técnica de la librería
  
 El objetivo de esta librería es validar los links encontrados en un archivo o archivos .md y obtener estadísticas de los mismos. Estose logro por medio de la siguiente implementación:
 
@@ -141,20 +141,20 @@ Broken: 1 Ok: 2
 ```
 
 
-## Guía de uso e implementación de la librería
+## Guía de instalación  y uso de la librería
 
 Módulo instalable via npm install <github-user>/md-links. Este módulo incluye un ejecutable que puedes invocar en la línea de comando como una interfaz que puedes importar con require para usarlo programáticamente.
 
 Esto hará que se instalen las dependencias, para que el módulo funcione correctamente. Este módulo tiene una función principal llamada mdlinks, que tiene dos parametros PathUrl : Es el parámetro que recibe la dirección del archivo y Option : Que es el parámetro que recibe la opción --validate o --stats.
 
-## Instalación
+### Instalación
 
 Módulo instalable via `npm install mdlink-sogcm`. Este módulo incluye un ejecutable que se puede importar con `require`
 para usarlo programáticamente.
 
  Puede instalarse via `npm install --global mdlink-sogcm` si se desea implementar globalmente
 
- ## Uso
+ ### Uso
 
  En la consola se debe escribir md-links y el nombre del archivo o documento que se desee analizar:
 
